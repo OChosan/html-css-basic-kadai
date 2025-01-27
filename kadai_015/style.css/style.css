@@ -1,0 +1,38 @@
+/* 全体のフォント設定 */
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+  text-align: center;
+}
+
+/* ルート要素のフォント設定 */
+:root {
+  font-size: 20px;
+}
+
+/* MY PROFILEの色設定 */
+.skyblue-text {
+  color: skyblue;
+}
+
+.pink-text {
+  color: rgb(255, 192, 203);
+}
+
+/* h1のフォント設定 */
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em; /* ルート要素の2倍 */
+  letter-spacing: 1.2em; /* 文字の大きさに対して1.2倍 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影の設定 */
+  border-bottom: 3px solid rgb(115, 115, 114); /* 下線の設定 */
+}
+
+/* basic内の特定の要素の太字設定 */
+#basic strong {
+  font-weight: bold;
+}
+
+/* 通常のpのスタイルをリセット */
+p {
+  font-weight: normal;
+}
