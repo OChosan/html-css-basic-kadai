@@ -29,16 +29,16 @@ h1 {
   padding-top: 20px; /* さらに上側に余白を追加 */
   border-bottom: 3px solid rgb(115, 115, 114); /* 下線の設定 */
 }
-
-/* basic内の特定の要素の太字設定 */
+              
+/* 子孫セレクタを使用してbasic内のstrong要素を太字設定 */
 #basic strong {
   font-weight: bold;
 }
-/*p要素内のstrong要素を太字に設定*/
-p strong {
-    font-weight:bold;
-}
 
+/* 子孫セレクタを使用してp要素内のstrong要素を太字設定 */
+p strong {
+  font-weight: bold;
+}
 
 /* 通常のpのスタイルをリセット */
 p {
