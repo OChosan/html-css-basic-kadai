@@ -24,6 +24,9 @@ h1 {
   font-size: 2rem; /* ルート要素の2倍 */
   letter-spacing: 1.2em; /* 文字の大きさに対して1.2倍 */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影の設定 */
+  border-top: 1px solid rgba(178,178,178,0.5); /*上部のアンダーラインを設定（薄いグレー）*/
+  margin-top: 20px; /* アンダーラインとMYPROFILEの上側に余白を追加 */
+  padding-top: 20px; /* さらに上側に余白を追加 */
   border-bottom: 3px solid rgb(115, 115, 114); /* 下線の設定 */
 }
 
@@ -31,7 +34,7 @@ h1 {
 #basic strong {
   font-weight: bold;
 }
-/*通常のpのスタイルをリセットし、子孫要素の太字のみ実装*/
+/*p要素内のstrong要素を太字に設定*/
 p strong {
     font-weight:bold;
 }
@@ -41,3 +44,19 @@ p strong {
 p {
   font-weight: normal;
 }
+
+/* 特定のパラグラフにアンダーライン設定 */
+p:last-of-type {
+  position: relative;
+  padding-bottom: 25px; /* 十分な余白を取って、アンダーラインがテキストの下に配置されるようにする */
+}
+
+p:last-of-type::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(178, 178, 178, 0.5); /* 下部のアンダーライン設定（薄いグレー） */
+}
+
