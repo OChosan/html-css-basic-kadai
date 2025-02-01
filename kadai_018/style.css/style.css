@@ -7,15 +7,6 @@
   position: relative; /* 擬似要素用の位置基準を設定 */
 }
 
-#top::before {
-  content: '';
-  position: absolute;
-  top: -20px; /* 上のマージンに合わせて調整 */
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: lightgrey; /* アンダーラインの色 */
-}
 
 .top-child {
   width: 20%; /* 親要素の20%になるように設定 */
@@ -65,15 +56,6 @@
   position: relative; /* 擬似要素用の位置基準を設定 */
 }
 
-#bottom::after {
-  content: '';
-  position: absolute;
-  bottom: -20px; /* 下のマージンに合わせて調整 */
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: lightgrey; /* アンダーラインの色 */
-}
 
 #bottom-child01,
 #bottom-child02,
@@ -81,23 +63,15 @@
   width: 400px;
   height: 100px;
   background-color: #e5dcf0;
-  position: absolute; /* 本来の位置からずらすためにabsoluteを使用 */
-}
+  }
 
-#bottom-child01 {
-  top: 0;
-  left: 0;
-}
 
 #bottom-child02 {
-  top: 100px;
-  left: 200px; /* 本来の位置の左から200pxずらす */
+  position: relative;
+  left: 200px;
 }
 
 #bottom-child03 {
-  top: 200px;
-  left: 400px; /* 本来の位置の左から400pxずらす */
+  position: relative;
+  left: 400px;
 }
-
-
-
